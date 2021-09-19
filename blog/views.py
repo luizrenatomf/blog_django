@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger 
 from django.views.generic import ListView
 from django.core.mail import send_mail
 from .models import Post
@@ -18,9 +18,7 @@ def post_list(request):
 		# Se a página estiver fora do intervalo,
 		# exibe a última página de resultados
 		posts = paginator.page(paginator.num_pages)
-	return render(request,
-		          'blog/post/list.html',
-		          {'posts':posts})
+	return render(request,'blog/post/list.html',{'page':page,'posts':posts})
 
 
 def post_detail(request,year,month,day,post):
