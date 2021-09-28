@@ -6,6 +6,7 @@ from taggit.models import Tag
 from django.db.models import Count
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
+
 from .models import Post, Comment
 from .forms import EmailPostForm, CommentForm, SearchForm
 
